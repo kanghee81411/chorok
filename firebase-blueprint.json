@@ -1,0 +1,80 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "청소년 사용자 프로필 및 환경설정",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string" },
+        "schoolGrade": { "type": "string" },
+        "region": {
+          "type": "object",
+          "properties": {
+            "province": { "type": "string" },
+            "city": { "type": "string" }
+          }
+        },
+        "interestedCategories": { "type": "array", "items": { "type": "string" } },
+        "freeOnly": { "type": "boolean" },
+        "onlineOnly": { "type": "boolean" },
+        "savedActivityIds": { "type": "array", "items": { "type": "string" } },
+        "weeklyActivityGoal": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "email", "name", "role"]
+    },
+    "activityLogs": {
+      "title": "User Activity Record",
+      "description": "청소년 활동 이력 및 학생부 세특 기록",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "activityId": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "completedDate": { "type": "string" },
+        "learnedSkills": { "type": "array", "items": { "type": "string" } },
+        "reflection": { "type": "string" },
+        "evidenceUrl": { "type": "string" },
+        "hours": { "type": "number" },
+        "studentRecordKeyword": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "title", "completedDate"]
+    },
+    "communityRequests": {
+      "title": "Community Opening Request",
+      "description": "동네 개설 요청 게시글",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "region": {
+          "type": "object",
+          "properties": {
+            "province": { "type": "string" },
+            "city": { "type": "string" }
+          }
+        },
+        "targetAudience": { "type": "string" },
+        "proposerName": { "type": "string" },
+        "proposerRole": { "type": "string" },
+        "proposerId": { "type": "string" },
+        "description": { "type": "string" },
+        "requiredSupport": { "type": "string" },
+        "supportersCount": { "type": "number" },
+        "supportersUserIds": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "comments": { "type": "array" }
+      },
+      "required": ["id", "title", "category", "proposerId"]
+    }
+  }
+}

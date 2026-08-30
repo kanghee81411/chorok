@@ -1,0 +1,8 @@
+{
+  "name": "Remix 청록 (청소년들의 기록)",
+  "description": "지방 및 정보 취약 지역 청소년을 위한 맞춤형 대외활동 탐색, 기회 사다리 성장 경로, 마감 알림 및 지역 활동 개설 요청 플랫폼",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
